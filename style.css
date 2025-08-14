@@ -159,12 +159,12 @@ li:hover a {
 }
 /* media queries*/
 
-@media (min-width: 700px) {
+/*@media (min-width: 700px) {
   :root {
   }
   :light {
   }
-}
+}*/
 /*animation*/
 
 @keyframes slide-in {
