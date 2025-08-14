@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #103849;
+  --secondary-color: white;
+  --main-color-blur: #10384933;
+}
+body {
+  background-color: var(--main-color);
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+  /*background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;*/
+
+  /*fazendo tudo junto*/
+}
+body * {
+  font-family: "Inter", sans-serif;
+}
+
+.light {
+  --main-color: white;
+  --secondary-color: #103849;
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px auto;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 0px 24px;
+}
+
+#profile {
+  text-align: center; /* em elementos inline não pode usar margin auto. Posso usar display block na img e colocar margin auto ou posso alinhar todo conteúdo da div profile*/
+  padding: 24px 24px 0 24px;
+}
+
+#profile img {
+  width: 112px;
+  border-radius: 50%;
+}
+
+#profile p {
+  color: var(--main-color);
+  size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+#light-mode {
+  width: 60px;
+  position: relative;
+  margin: 20px auto 0px;
+}
+
+#light-mode button {
+  border-radius: 50%;
+  background-color: var(--main-color);
+  width: 30px;
+  height: 30px;
+
+  position: absolute; /* sobrepondo elementos */
+  z-index: 1;
+  left: 0;
+
+  transform: translateY(-50%);
+  top: 50%; /*centralizando ao meio*/
+}
+
+#light-mode span {
+  border: 1px solid var(--main-color);
+  width: 60px;
+  height: 20px;
+  display: block;
+  border-radius: 999999px;
+  position: relative;
+  margin: auto;
+}
+
+.light #light-mode button {
+  right: 0;
+  left: initial;
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  text-decoration: none;
+  color: var(--main-color);
+  size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur (4px);
+  transition: background 0.2s;
+}
+
+li:hover {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+li:hover a {
+  color: var(--secondary-color);
+  border: 1px solid var(--main-color);
+}
+
+#footer {
+  text-align: center;
+  padding: 10px 0 20px 0;
+}
+
+#footer p {
+  color: var(--main-color);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#social-links {
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--main-color);
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+#social-links a:hover {
+  border-radius: 50%;
+  padding: 20px;
+  background-color: var(--main-color-blur);
+  color: var(--main-color);
+}
