@@ -10,6 +10,7 @@
 }
 body {
   background-color: var(--main-color);
+  height: 100vh; /*view port*/
   /*
   background-image: url(./assets/bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -72,6 +73,7 @@ body * {
 
   transform: translateY(-50%);
   top: 50%; /*centralizando ao meio*/
+  animation: slide-out 0.4s;
 }
 
 #light-mode span {
@@ -85,8 +87,7 @@ body * {
 }
 
 .light #light-mode button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 ul {
@@ -155,4 +156,31 @@ li:hover a {
   padding: 20px;
   background-color: var(--main-color-blur);
   color: var(--main-color);
+}
+/* media queries*/
+
+@media (min-width: 700px) {
+  :root {
+  }
+  :light {
+  }
+}
+/*animation*/
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
